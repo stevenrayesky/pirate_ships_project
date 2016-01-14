@@ -1,28 +1,16 @@
-== README
+== Ruby on Rails Pirate App
+- Created by Emily McCracken and Steven Rayesky
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was built for an assignment in which we needed to a have a many to many relationship in our database, and have a rich joined table. In this case we used Pirates (Argh!) and Boats, and their Expeditions as the join table.
 
-Things you may want to cover:
+The premise for the application is for a user to play a game in which they can capture <num> boats. A pirate can "discover" other boats at sea (create new instances of boats). The boats contain a number of  containers and particular cargo. Other users will either know what the cargo is, or how many containers the boat is carrying, but not both. They will select a boat, and then discover the "hidden" information. The value of the boat will be added to the user's booty.
 
-* Ruby version
+When they have selected <num> boats, their career as a Pirate is over, and they are added to a leader board that displays past Pirates and who has earned the most booty!
 
-* System dependencies
+===Functionality to be included:
 
-* Configuration
+* Pirates can sign-up and login, and logout. In this case they cannout delete their account so that the leader board is not affected.
 
-* Database creation
+* A Pirate can add Boats to their expeditions.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Expeditions will include where the boat was when the Pirate took it, how much the cargo was worth.
