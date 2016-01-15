@@ -1,0 +1,54 @@
+<div class="bg-img">
+	<%= image_tag "map.jpg", class: "map_image" %>
+</div>
+<div class="map_container">
+
+	<%= content_tag :div, id: "barataria_bay", class: "island_container" do %>
+		<%= image_tag "island4.png", id: "island_1", class: "map_islands" %>
+		<%= content_tag :div, class: "all_boats" do %>
+			<% @barataria_bay_boats.each do |boat| %>
+					<%= image_tag "boat.png", class: "boat_image" %>
+					<%= content_tag :p, class: "boat_name" do %>
+						<%= boat.name %>
+					<% end %>
+				<% end %>
+			<% end %>
+	<% end %>
+	
+	<%= content_tag :div, id: "tortuga", class: "island_container" do %>
+		<%= image_tag "island3.png", id: "island_2", class: "map_islands" %>
+		<%= content_tag :div, class: "all_boats" do %>
+			<% @canary_islands_boats.each do |boat| %>
+					<%= image_tag "boat.png", class: "boat_image" %>
+					<%= content_tag :p, class: "boat_name" do %>
+						<%= boat.name %>
+					<% end %>
+				<% end %>
+			<% end %>
+	<% end %>
+
+	<%= content_tag :div, id: "canary_islands", class: "island_container" do %>
+		<%= image_tag "island2.png", id: "island_3", class: "map_islands" %>
+		<%= content_tag :div, class: "all_boats" do %>
+			<% @tortuga_boats.each do |boat| %>
+					<%= image_tag "boat.png", class: "boat_image" %>
+					<%= content_tag :p, class: "boat_name" do %>
+						<%= boat.name %>
+					<% end %>
+				<% end %>
+			<% end %>
+	<% end %>
+
+	<%= content_tag :div, id: "port_royal", class: "island_container" do %>
+		<%= image_tag "island.png", id: "island_4", class: "map_islands" %>
+		<%= content_tag :div, class: "all_boats" do %>
+			<% @port_royal_boats.each do |boat| %>
+					<%= image_tag "boat.png", class: "boat_image" %>
+					<%= content_tag :p, class: "boat_name" do %>
+						<%= boat.name %>
+					<% end %>
+				<% end %>
+			<% end %>
+	<% end %>
+	
+</div>
