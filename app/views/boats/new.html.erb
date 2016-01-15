@@ -1,0 +1,22 @@
+<h1> create a new boat! </h1>
+
+<%= form_for @boat do |f| %>
+	<%= f.label :Name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :Amount_of_Containers %>
+	<%= f.select :container, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]%>
+	<br>
+	<%= f.label :Cargo_on_Board %>
+	<%= f.select :cargo, ['Gold', 'Preserved Meat', 'Jewels', 'Rotten Apples', 'Rum', 'Grain', 'Empty', 'Ammunition', 'Silver', 'Letters']%>
+	<br>
+	<%= f.label :Current_Location %>
+	<%= f.select :location, ['Port Royal', 'St. Marys Island', 'Tortuga', 'Clew Bay', 'New Providence', 'Barataria Bay', 'Canary Islands'] %>
+	<br>
+	<%= f.label :Is_This_Boat_Captured %>
+	<%= f.check_box :captured %>
+	<br>
+	<%= f.submit :create %>
+	<% end %>
+
+	<%= @boat.errors.full_messages.first if @boat.errors.any? %>
