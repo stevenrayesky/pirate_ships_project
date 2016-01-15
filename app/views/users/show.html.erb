@@ -1,0 +1,15 @@
+<h1> Pirate Info </h1>
+Captain <%= @user.lname %>
+<br>
+Bio: <%= @user.bio %>
+<br>
+Status: <%= @user.adjective %>
+<br>
+<br>
+
+
+<%= link_to("Sign Out", '/logout', method: :delete) %>
+<br>
+<br>
+
+current user logged in (for testing purposes): <%= @current_user.lname %>

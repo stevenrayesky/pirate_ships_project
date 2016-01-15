@@ -1,0 +1,13 @@
+<h1> Become a Pirate! </h1>
+
+<%= form_for @user do |f| %>
+<%= f.label :Captain %>
+<%= f.text_field :lname %>
+<%= f.label :password %>
+<%= f.password_field :password_digest %>
+<%= f.label :adjective %>
+<%= f.select :adjective, ['Scallywag', 'Buccaneer', 'Old Salt', 'SeaDog', 'Landlubber']%>
+<%= f.label :bio %>
+<%= f.text_field :bio %>
+<%= f.submit :create %>
+<% end %>
