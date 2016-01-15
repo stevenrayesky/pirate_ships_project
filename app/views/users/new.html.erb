@@ -4,7 +4,9 @@
 <%= f.label :Captain %>
 <%= f.text_field :lname %>
 <%= f.label :password %>
-<%= f.password_field :password_digest %>
+<%= f.password_field :password %>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
 <%= f.label :adjective %>
 <%= f.select :adjective, ['Scallywag', 'Buccaneer', 'Old Salt', 'SeaDog', 'Landlubber']%>
 <%= f.label :bio %>
