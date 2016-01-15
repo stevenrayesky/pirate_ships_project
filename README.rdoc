@@ -9,7 +9,7 @@ When they have selected <num> boats, their career as a Pirate is over, and they 
 
 ===Functionality to be included:
 
-* Pirates can sign-up and login, and logout. In this case they cannout delete their account so that the leader board is not affected.
+* Pirates can sign-up and login, and logout. In this case they cannot delete their account so that the leader board is not affected.
 
 * A Pirate can add Boats to their expeditions.
 
