@@ -5,9 +5,10 @@ class MapsController < ApplicationController
 		@tortuga_boats = []
 		@barataria_bay_boats = []
 		Boat.all.each do |boat|
-			if boat.captured? == nil
+			if boat.captured? == false
 				if boat.location == "Port Royal"
 					@port_royal_boats << boat
+					puts "*****BOAT********"
 				elsif boat.location == "Canary Islands"
 					@canary_islands_boats << boat
 				elsif boat.location == "Tortuga"
@@ -19,4 +20,5 @@ class MapsController < ApplicationController
 			end
 		end
 	end
+	puts @port_royal_boats
 end
