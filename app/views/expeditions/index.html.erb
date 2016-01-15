@@ -1,0 +1,14 @@
+<h1> Log of All Brave Expeditions! </h1>
+
+<% @expeditions.each do |expedition|  %>
+Name: <%= expedition.name %>
+<br>
+Captain's Log: <%= expedition.captains_log %>
+<br>
+Stolen From: <%= expedition.origin %>
+<br>
+Taken To: <%= expedition.destination %>
+<br>
+<br>
+<br>
+<% end %>

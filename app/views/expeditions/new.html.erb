@@ -1,17 +1,4 @@
-<h1> Boat Specs </h1>
-Name: S.S. <%= @boat.name %>
-<br>
-Cargo: <%= @boat.cargo %>
-<br>
-Amount of Containers: <%= @boat.container %>
-<br>
-Current Location: <%= @boat.location %>
-<br>
-Captured: <%= @boat.captured %>
-
-
-
-<h1> Congratulations on swiping this beautiful ship! </h1>
+<h1> Congratulations on swiping that beautiful ship! </h1>
 <h2> Please fill out an expedition report to document your brave capture! </h2>
 
 <%= form_for @expedition do |f| %>
@@ -23,11 +10,12 @@ Captured: <%= @boat.captured %>
 	<br>
 	<%= f.label :Stolen_From %>
 	<%= f.select :origin, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
-	<%= hidden_field_tag :boat_id, @boat.id%>
 	<br>
 	<%= f.label :Taken_To %>
 	<%= f.select :destination, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
 	<br>
+	<%= f.hidden_field :user_id %>
+	<%= f.hidden_field :boat_id %>s
 	<br>
 	<%= f.submit :create %>
 	<% end %>

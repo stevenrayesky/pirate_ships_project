@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115170403) do
+ActiveRecord::Schema.define(version: 20160115191841) do
 
   create_table "boats", force: :cascade do |t|
     t.string   "name"
@@ -28,10 +28,11 @@ ActiveRecord::Schema.define(version: 20160115170403) do
     t.integer  "user_id"
     t.text     "captains_log"
     t.integer  "worth"
-    t.integer  "origin"
-    t.integer  "destination"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "origin"
+    t.string   "destination"
+    t.string   "name"
   end
 
   create_table "users", force: :cascade do |t|

@@ -5,8 +5,8 @@ class CreateExpeditions < ActiveRecord::Migration
     	t.integer :user_id
     	t.text :captains_log
     	t.integer :worth
-      	t.integer :origin
-      	t.integer :destination
+      t.integer :origin
+      t.integer :destination
 
       t.timestamps null: false
     end

@@ -16,7 +16,10 @@ class BoatsController < ApplicationController
 			redirect_to new_boat_path
 			flash[:notice] = "please try again"
 		end
-
+	    if @boat.errors.any?
+	    @boat.errors.each do |message|
+	    end
+		end
 	end
 
 	def edit
@@ -26,6 +29,9 @@ class BoatsController < ApplicationController
 	end
 
 	def show
+		@boat = Boat.find(params[:id])
+		@expedition = Expedition.new
+		@expedition.boat_id = @boat_id
 	end
 
 	def destroy
