@@ -1,0 +1,16 @@
+<h1> All Boats </h1>
+
+<% @boats.each do |boat|  %>
+Name <%= boat.name %>
+<br>
+Cargo <%= boat.cargo %>
+<br>
+Amount of Containers <%= boat.container %>
+<br>
+Current Location <%= boat.location %>
+<br>
+Captured? <%= boat.captured %>
+<br>
+<br>
+<br>
+<% end %>
