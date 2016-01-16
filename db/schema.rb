@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115191841) do
+ActiveRecord::Schema.define(version: 20160116181432) do
 
   create_table "boats", force: :cascade do |t|
     t.string   "name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160115191841) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "location"
-    t.string   "cargo"
+    t.integer  "cargo"
   end
 
   create_table "expeditions", force: :cascade do |t|
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20160115191841) do
     t.string   "name"
   end
 
+  create_table "stalks", force: :cascade do |t|
+    t.integer  "boat_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "lname"
     t.string   "password_digest"
@@ -42,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160115191841) do
     t.string   "adjective"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "total_worth"
   end
 
 end
