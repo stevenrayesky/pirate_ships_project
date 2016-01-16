@@ -1,3 +1,20 @@
+.boat_name {
+    height: 50px;
+    width: 80px;
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #2B3231;
+    color: #EFE8D8;
+    display: none;
+    padding: 6px;
+    position: absolute;
+}
+
+.boat_image:hover + .boat_name {
+	display: block;
+}
+
 .map_container {
 	
 }
