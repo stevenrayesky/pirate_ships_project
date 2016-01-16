@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 	def index
 		# set variable to all users so the index can display all users
 		@users = User.all
+		@users_sorted_by_worth = @users.sort_by(&:total_worth).reverse
 	end
 
 	def new
