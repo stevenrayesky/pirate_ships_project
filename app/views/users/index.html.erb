@@ -1,6 +1,17 @@
 <h1> All Pirates!! </h1>
 
-<% @users.each do |user|  %>
-Captain <%= user.lname %>
-<br>
+
+<%= content_tag :div, class: "leader_board" do %>
+	<% @users_sorted_by_worth.each do |user|  %>
+		<%= content_tag :h4, class: "captain_name" do %>
+			Captain <%= user.lname %> <span><%= user.adjective %></span>
+			<%= content_tag :h3, class: "total_worth" do %>
+				<%= user.total_worth %>
+			<% end %>
+		<% end %>
+
+		<br>
+	<% end %>
 <% end %>
+
+
