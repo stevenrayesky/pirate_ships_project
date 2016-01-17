@@ -9,6 +9,20 @@ Current Location: <%= @boat.location %>
 <br>
 Captured: <%= @boat.captured %>
 
+<h1> Update This Boat's Contents </h1>
+<%= form_for @boat do |f| %>
+	<%= f.label :Cargo_on_Board %>
+	<%= f.select :cargo, ['Gold', 'Preserved Meat', 'Jewels', 'Rotten Apples', 'Rum', 'Grain', 'Empty', 'Ammunition', 'Silver', 'Letters']%>
+	<br>
+	<%= f.label :Current_Location %>
+	<%= f.select :location, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
+	<br>
+	<%= f.label :Is_This_Boat_Captured %>
+	<%= f.check_box :captured %>
+	<br>
+	<%= f.submit :create %>
+<% end %>
+
 
 
 <h1> Congratulations on swiping this beautiful ship! </h1>
