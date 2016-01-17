@@ -46,6 +46,6 @@ class BoatsController < ApplicationController
 	private
 
 	def boat_params
-		params.require(:boat).permit(:name, :container, :cargo, :location, :captured)
+		params.require(:boat).permit(:name, :container, :cargo, :location, :captured, :image)
 	end
 end
