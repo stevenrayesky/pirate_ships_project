@@ -1,4 +1,6 @@
 <h1> Boat Specs </h1>
+<%= image_tag @boat.image.url(:medium) %>
+<br>
 Name: S.S. <%= @boat.name %>
 <br>
 Cargo: <%= @boat.cargo %>
@@ -8,6 +10,8 @@ Amount of Containers: <%= @boat.container %>
 Current Location: <%= @boat.location %>
 <br>
 Captured: <%= @boat.captured %>
+<br>
+
 
 <h1> Update This Boat's Contents </h1>
 <%= form_for @boat do |f| %>

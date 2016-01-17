@@ -1,6 +1,7 @@
 <h1> create a new boat! </h1>
+<h3> please be sure to upload a photo of the boat for verification purposes </h3>
 
-<%= form_for @boat do |f| %>
+<%= form_for @boat, :url => boats_path, :html => { :multipart => true } do |f| %>
 	<%= f.label :Name %>
 	<%= f.text_field :name %>
 	<br>
@@ -12,6 +13,8 @@
 	<br>
 	<%= f.label :Current_Location %>
 	<%= f.select :location, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
+	<br>
+	<%= f.file_field :image %>
 	<br>
 	<%= f.label :Is_This_Boat_Captured %>
 	<%= f.check_box :captured %>
