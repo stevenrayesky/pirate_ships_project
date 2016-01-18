@@ -17,8 +17,8 @@
 						<br>
 						containers: <%= boat.container %>
 						<% if @current_user.stalking?(boat) == false %>
-						<%= content_tag :p, class: "stalk_button" do %>
-						<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+							<%= content_tag :p, class: "stalk_button" do %>
+								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
 							<% end %>
 						<% end %>
 					<% end %>
@@ -34,7 +34,9 @@
 					<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
 						<% if @current_user.stalking?(boat) == false %>
-						<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+							<%= content_tag :p, class: "stalk_button" do %>
+								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+							<% end %>
 						<% end %>
 					<% end %>
 				<% end %>
@@ -49,7 +51,9 @@
 					<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
 						<% if @current_user.stalking?(boat) == false %>
-							<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+							<%= content_tag :p, class: "stalk_button" do %>
+								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+							<% end %>
 						<% end %>
 					<% end %>
 				<% end %>
@@ -64,7 +68,9 @@
 				<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
 						<% if @current_user.stalking?(boat) == false %>
-							<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+							<%= content_tag :p, class: "stalk_button" do %>
+									<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+								<% end %>
 						<% else %>
 						<% end %>
 				<% end %>
