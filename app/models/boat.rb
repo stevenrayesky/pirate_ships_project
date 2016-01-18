@@ -13,4 +13,28 @@ class Boat < ActiveRecord::Base
 	:content_type => /\Aimage\/.*\Z/
 
 	CARGO_OPTIONS = {'Gold' => 500, 'Rum' => 450, 'Jewels' => 400, 'Silver' => 350, 'Ammunition' => 300, 'Grain' => 250, 'Preserved Meat' => 200, 'Rotten Apples' => 150, 'Letters' => 100, 'Empty' => 100}
+
+	def get_cargo_string(num)
+		if num == 500
+			"Gold"
+		elsif num == 450
+			"Rum"
+		elsif num == 400
+			"Jewels"
+		elsif num == 350
+			"Silver"
+		elsif num == 300
+			"Ammunition"
+		elsif num == 250
+			"Grain"
+		elsif num == 200
+			"Preserved Meat"
+		elsif num == 150
+			"Rotten Apples"
+		elsif num == 100
+			"Letters"
+		else
+			"Empty!"
+		end
+	end
 end
