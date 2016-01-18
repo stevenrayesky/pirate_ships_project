@@ -1,6 +1,12 @@
-.map_container {
-	
+.stalked {
+	color: white;
+	font-size: 2000%;
+	position: absolute;
+	left: 10%;
+	top: 25%;
+	display: none;
 }
+
 .map_image {
 	z-index: -1;
 	position: absolute;	
