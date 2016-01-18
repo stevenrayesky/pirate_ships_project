@@ -11,4 +11,6 @@ class Boat < ActiveRecord::Base
 	:default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :image,
 	:content_type => /\Aimage\/.*\Z/
+
+	CARGO_OPTIONS = {'Gold' => 500, 'Rum' => 450, 'Jewels' => 400, 'Silver' => 350, 'Ammunition' => 300, 'Grain' => 250, 'Preserved Meat' => 200, 'Rotten Apples' => 150, 'Letters' => 100, 'Empty' => 100}
 end

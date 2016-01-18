@@ -1,4 +1,5 @@
-<h1> Pirate Info </h1>
+<div class="user_info">
+<h1 class="user_info_header"> Pirate Info </h1>
 Captain <%= @user.lname %>
 <br>
 Bio: <%= @user.bio %>
@@ -6,6 +7,7 @@ Bio: <%= @user.bio %>
 Status: <%= @user.adjective %>
 <br>
 <br>
+</div>
 
 
 <%= link_to("Sign Out", '/logout', method: :delete) %>
