@@ -1,11 +1,11 @@
 <body class="users_page">
 <div class="user_info">
-<h3 class="user_info_header"> Pirate Info </h3>
-Captain <%= @user.lname %>
+<h2 class="user_info_header"> Pirate Info </h2>
+<%= content_tag :h3, "Captain #{@user.lname}" %>
+<%= content_tag :h3, "Bio:" %>
+<%= @user.bio %>
 <br>
-Bio: <%= @user.bio %>
-<br>
-Status: <%= @user.adjective %>
+<%= content_tag :h3, "Status: #{@user.adjective}" %>
 <br>
 <br>
 </div>
@@ -34,6 +34,29 @@ Status: <%= @user.adjective %>
 <%= f.submit :create %>
 <% end %>
 </div>
+
+<div class="user_stalked_boats">
+<h3 class="user_stalked_boats_header"> Boats Being Stalked </h3>
+
+<% @user.stalked_boats.each do |boat| %>
+<%= boat.name %>
+<br>
+<br>
+<% end %>
+
+</div>
+
+<!-- <div class="user_boat_list">
+<h3 class="user_boat_list_header"> Pirate's Fleet </h3>
+
+<% @user.expeditions.each do |boat| %>
+<%= boat.name %>
+<br>
+<br>
+<% end %>
+
+</div> -->
+
 </body>
 
 
