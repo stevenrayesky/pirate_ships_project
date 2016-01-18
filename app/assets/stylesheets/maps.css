@@ -45,7 +45,6 @@
 
 .island_container {
 	position: absolute;
-	border: solid blue 1px;
 	width: 25%;
 	height: 35%;
 }
