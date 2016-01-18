@@ -9,7 +9,10 @@
 <body>
 	<header>
 		<ul id="drop-nav">
-		  <li><%= link_to "Map", '/map' %></li>
+		  <li><%= link_to "Map", '/map' %>
+			<ul>
+		      <li><%= link_to "Boat Index", boats_path %></li>
+		  	</ul>
 		  <li><%= link_to "Leaderboard", users_path %></li>
 		  <li><%= link_to "Account", " " %>
 			<ul>
@@ -21,8 +24,8 @@
 		  <li><%= link_to "Pirate", "" %>
 		    <ul>
 		    <li><%= link_to "My Pirate Profile", user_path(@current_user.id) %></li>
-		    <li><%= link_to "Boats", boats_path %></li>
-		    <li><%= link_to "Expeditions", expeditions_path %></li>
+		    <li><%= link_to "Add Boat", new_boat_path %></li>
+		    <li><%= link_to("Sign Out", '/logout', method: :delete) %></li>
 		    </ul>
 		    <% end %>
 		</ul>
