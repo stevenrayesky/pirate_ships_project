@@ -1,5 +1,6 @@
+<body class="users_page">
 <div class="user_info">
-<h1 class="user_info_header"> Pirate Info </h1>
+<h3 class="user_info_header"> Pirate Info </h3>
 Captain <%= @user.lname %>
 <br>
 Bio: <%= @user.bio %>
@@ -9,12 +10,14 @@ Status: <%= @user.adjective %>
 <br>
 </div>
 
-
+<div class="sign_out">
 <%= link_to("Sign Out", '/logout', method: :delete) %>
+</div>
 <br>
 <br>
 
-<h1> Edit Your Account </h1>
+<div class="edit_account">
+<h3 class="edit_account_header"> Edit Your Account </h3>
 <%= form_for @user do |f| %>
 <%= f.label :Captain %>
 <%= f.text_field :lname %>
@@ -30,5 +33,7 @@ Status: <%= @user.adjective %>
 <br>
 <%= f.submit :create %>
 <% end %>
+</div>
+</body>
 
 
