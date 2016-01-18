@@ -1,4 +1,4 @@
 class Expedition < ActiveRecord::Base
-	belongs_to :boats
-	belongs_to :users
+	belongs_to :user
+	belongs_to :boat
 end

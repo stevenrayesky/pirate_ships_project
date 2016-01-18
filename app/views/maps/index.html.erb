@@ -19,6 +19,7 @@
 						<% if @current_user.stalking?(boat) == false %>
 							<%= content_tag :p, class: "stalk_button" do %>
 								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
+									<%= render 'form'%>
 							<% end %>
 						<% end %>
 					<% end %>
