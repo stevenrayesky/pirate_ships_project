@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20160117181125) do
   create_table "boats", force: :cascade do |t|
     t.string   "name"
     t.integer  "container"
+    t.integer  "location"
+    t.integer  "cargo"
     t.boolean  "captured"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "location"
-    t.integer  "cargo"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"

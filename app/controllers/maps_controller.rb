@@ -1,5 +1,7 @@
 class MapsController < ApplicationController
 	def index
+		current_user
+		@stalk = Stalk.new
 		@port_royal_boats = []
 		@canary_islands_boats = []
 		@tortuga_boats = []
@@ -20,5 +22,4 @@ class MapsController < ApplicationController
 			end
 		end
 	end
-	puts @port_royal_boats
 end

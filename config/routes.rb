@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :users
-  resources :boats
+  resources :boats do
+    resources :stalks
+  end
   resources :expeditions
   
   # You can have the root of your site routed with "root"
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', as: :logout
   post 'newexpedition' => 'expeditions#create', as: :newexpedition
-
+  post '/boats/:boat_id/stalks' => 'stalks#create'
 
   get 'map' => 'maps#index'
 
