@@ -3,7 +3,7 @@
 
 
 <% @boats.each do |boat|  %>
-<div class="all_boats">
+<div class="all_boats_div">
 <%= image_tag boat.image.url(:medium) %>
 <br>
 Name: <%= link_to boat.name, boat_path(boat.id) %>
