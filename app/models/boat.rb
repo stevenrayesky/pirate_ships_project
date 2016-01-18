@@ -12,6 +12,8 @@ class Boat < ActiveRecord::Base
 	validates_attachment_content_type :image,
 	:content_type => /\Aimage\/.*\Z/
 
+	CARGO_OPTIONS = {'Gold' => 500, 'Rum' => 450, 'Jewels' => 400, 'Silver' => 350, 'Ammunition' => 300, 'Grain' => 250, 'Preserved Meat' => 200, 'Rotten Apples' => 150, 'Letters' => 100, 'Empty' => 100}
+
 	def get_cargo_string(num)
 		if num == 500
 			"Gold"

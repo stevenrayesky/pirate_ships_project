@@ -9,7 +9,7 @@
 	<%= f.select :container, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]%>
 	<br>
 	<%= f.label :Cargo_on_Board %>
-	<%= f.select :cargo, ['Gold', 'Preserved Meat', 'Jewels', 'Rotten Apples', 'Rum', 'Grain', 'Empty', 'Ammunition', 'Silver', 'Letters']%>
+	<%= f.select(:cargo, Boat::CARGO_OPTIONS) %>
 	<br>
 	<%= f.label :Current_Location %>
 	<%= f.select :location, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
