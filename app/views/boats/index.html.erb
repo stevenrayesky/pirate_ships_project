@@ -1,6 +1,8 @@
 <h1> All Boats </h1>
 
 <% @boats.each do |boat|  %>
+<%= image_tag boat.image.url(:medium) %>
+<br>
 Name: S.S. <%= boat.name %>
 <br>
 Cargo: <%= boat.cargo %>

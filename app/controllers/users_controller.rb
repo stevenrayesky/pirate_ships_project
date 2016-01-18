@@ -21,14 +21,19 @@ class UsersController < ApplicationController
 	end
 
 	def edit
+		@user = User.find(params[:id])
 	end
 
-	def updated
+	def update
+		@user = User.find(params[:id])
+    	# set the user to whoever's session is running (current user)
+        @user.update(user_params)
+        redirect_to user_path @user
+        flash[:notice] = "you updated your account!"
 	end
 
 	def show
 		@user = User.find(params[:id])
-    	@current_user = User.find(session[:user_id])
 	end
 
 	def destroy

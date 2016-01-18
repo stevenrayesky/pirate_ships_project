@@ -23,9 +23,15 @@ class BoatsController < ApplicationController
 	end
 
 	def edit
+		@boat = Boat.find(params[:id])
 	end
 
 	def update
+		@boat = Boat.find(params[:id])
+    	# set the user to whoever's session is running (current user)
+        @boat.update(boat_params)
+        redirect_to boat_path @boat
+        flash[:notice] = "this boat has been updated"
 	end
 
 	def show
@@ -40,6 +46,6 @@ class BoatsController < ApplicationController
 	private
 
 	def boat_params
-		params.require(:boat).permit(:name, :container, :cargo, :location, :captured)
+		params.require(:boat).permit(:name, :container, :cargo, :location, :captured, :image)
 	end
 end
