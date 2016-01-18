@@ -11,4 +11,28 @@ class Boat < ActiveRecord::Base
 	:default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :image,
 	:content_type => /\Aimage\/.*\Z/
+
+	def get_cargo_string(num)
+		if num == 500
+			"Gold"
+		elsif num == 450
+			"Rum"
+		elsif num == 400
+			"Jewels"
+		elsif num == 350
+			"Silver"
+		elsif num == 300
+			"Ammunition"
+		elsif num == 250
+			"Grain"
+		elsif num == 200
+			"Preserved Meat"
+		elsif num == 150
+			"Rotten Apples"
+		elsif num == 100
+			"Letters"
+		else
+			"Empty!"
+		end
+	end
 end
