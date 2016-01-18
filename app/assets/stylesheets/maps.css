@@ -6,16 +6,17 @@
 	left: 10%;
 	top: 25%;
 	display: none;
+}
 
-.logo_map_layout {
+.logo_map {
 	width: 15%;
 	margin-left: 25px;
 	margin-top: 20px;
 }
 
 .boat_name {
-    height: 50px;
-    width: 80px;
+    height: 70px;
+    width: 100px;
     margin-top: 50px;
     text-align: center;
     vertical-align: middle;
