@@ -1,7 +1,7 @@
 class Boat < ActiveRecord::Base
 	has_many :stalks, foreign_key: "boat_id"
-	has_many :expeditions
-	has_many :users, through: :expeditions
+	has_many :expeditions, foreign_key: "boat_id"
+	has_many :exp_users, through: :expeditions, source: :user
 	has_many :stalking_users, through: :stalks, source: :user
 
 	validates :name, uniqueness: {message: "this boat has already been created"}
@@ -13,6 +13,10 @@ class Boat < ActiveRecord::Base
 	:content_type => /\Aimage\/.*\Z/
 
 	CARGO_OPTIONS = {'Gold' => 500, 'Rum' => 450, 'Jewels' => 400, 'Silver' => 350, 'Ammunition' => 300, 'Grain' => 250, 'Preserved Meat' => 200, 'Rotten Apples' => 150, 'Letters' => 100, 'Empty' => 100}
+
+	def worth_for_pirate
+		worth = cargo*container
+	end
 
 	def get_cargo_string(num)
 		if num == 500

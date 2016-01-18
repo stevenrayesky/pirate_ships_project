@@ -1,0 +1,20 @@
+<%= content_tag :div, class: "expedition_form_div" do %>
+	<%= form_for @expedition do |f| %>
+		<%= f.label :Expedition_name %>
+		<%= f.text_field :name %>
+		<br>
+		<%= f.label :Captains_Log %>
+		<%= f.text_area :captains_log%>
+		<br>
+		<%= f.label :Stolen_From %>
+		<%= f.select :origin, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
+		<br>
+		<%= f.label :Taken_To %>
+		<%= f.select :destination, ['Port Royal', 'Tortuga', 'Barataria Bay', 'Canary Islands'] %>
+		<br>
+		<%= f.hidden_field(:user_id, :value => @current_user.id) %>
+		<%= f.hidden_field(:boat_id, :value => boat.id) %>
+		<br>
+		<%= f.submit :create %>
+	<% end %>
+<% end %>
