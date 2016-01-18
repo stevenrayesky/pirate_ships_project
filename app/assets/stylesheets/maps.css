@@ -109,3 +109,18 @@
 .boat_image {
 	width: 18%;
 }
+
+.expedition_form_div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 85%;
+	height: 65%;
+	border-radius: 15px;
+	background-color: #EFE8D7;
+	border: solid #656565 2px;
+}
+
+
+
+

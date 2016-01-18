@@ -1,5 +1,6 @@
 class MapsController < ApplicationController
 	def index
+		@expedition = Expedition.new
 		current_user
 		@stalk = Stalk.new
 		@port_royal_boats = []
