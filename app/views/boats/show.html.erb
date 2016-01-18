@@ -1,4 +1,7 @@
-<h1> Boat Specs </h1>
+<body class="boat_specs_page">
+
+<div class="boat_specs">
+<h3 class="boat_specs_header"> Boat Specs </h3>
 <%= image_tag @boat.image.url(:medium) %>
 <br>
 Name: S.S. <%= @boat.name %>
@@ -11,9 +14,12 @@ Current Location: <%= @boat.location %>
 <br>
 Captured: <%= @boat.captured %>
 <br>
+</div>
 
 
-<h1> Update This Boat's Contents </h1>
+
+<div class="update_boat">
+<h3 class="update_boat_header"> Update This Boat's Contents </h3>
 <%= form_for @boat do |f| %>
 	<%= f.label :Cargo_on_Board %>
 	<%= f.select :cargo, ['Gold', 'Preserved Meat', 'Jewels', 'Rotten Apples', 'Rum', 'Grain', 'Empty', 'Ammunition', 'Silver', 'Letters']%>
@@ -26,12 +32,11 @@ Captured: <%= @boat.captured %>
 	<br>
 	<%= f.submit :create %>
 <% end %>
+</div>
 
 
-
-<h1> Congratulations on swiping this beautiful ship! </h1>
-<h2> Please fill out an expedition report to document your brave capture! </h2>
-
+<div class="new_expedition">
+<h3 class="new_expedition_header"> Fill out an expedition report </h3>
 <%= form_for @expedition do |f| %>
 	<%= f.label :Name %>
 	<%= f.text_field :name %>
@@ -49,3 +54,5 @@ Captured: <%= @boat.captured %>
 	<br>
 	<%= f.submit :create %>
 	<% end %>
+</div>
+</body>

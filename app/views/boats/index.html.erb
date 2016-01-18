@@ -1,9 +1,12 @@
-<h1> All Boats </h1>
+<body class="all_boats_page">
+<h3 class="all_boats_header"> All Boats on the Water</h3>
+
 
 <% @boats.each do |boat|  %>
+<div class="all_boats">
 <%= image_tag boat.image.url(:medium) %>
 <br>
-Name: S.S. <%= boat.name %>
+Name: <%= link_to boat.name, boat_path(boat.id) %>
 <br>
 Cargo: <%= boat.cargo %>
 <br>
@@ -12,7 +15,6 @@ Amount of Containers: <%= boat.container %>
 Current Location: <%= boat.location %>
 <br>
 Captured: <%= boat.captured %>
-<br>
-<br>
-<br>
+</div>
 <% end %>
+</body>

@@ -1,0 +1,68 @@
+.boat_specs {
+	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 350px;
+	margin-top: 10px;
+	font-family: helvetica;
+}
+
+.boat_specs_header {
+	color: #B23C11;	
+}
+
+.boat_specs_page {
+	background-image: url("waves.jpg");
+}
+
+.update_boat {
+	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 350px;
+	margin-top: 10px;
+	font-family: helvetica;
+}
+
+.update_boat_header {
+	color: #B23C11;	
+}
+
+.new_expedition {
+	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 350px;
+	margin-top: 10px;
+	font-family: helvetica;
+}
+
+.new_expedition_header {
+	color: #B23C11;	
+}
+
+.all_boats {
+/*	text-align: center;*/
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	width: 30%;
+/*	border-radius: 10%;*/
+/*	margin-left: 100px;*/
+/*	margin-right: 300px;
+	margin-top: 10px;*/
+	font-family: helvetica;
+}
+
+.all_boats_header {
+	color: #2B3231;	
+}
+
+.all_boats_page {
+	background-image: url("waves.jpg");
+}
