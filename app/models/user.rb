@@ -7,6 +7,11 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates_presence_of :password, :on => :create
 	validates :lname, uniqueness: true
+	before_save :default_values
+ 	
+ 	def default_values
+    	self.total_worth ||= 0
+  	end
 
 	def stalking?(boat)
 		stalked_boats.include?(boat)
