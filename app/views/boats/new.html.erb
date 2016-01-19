@@ -1,5 +1,7 @@
-<h1> create a new boat! </h1>
-<h3> please be sure to upload a photo of the boat for verification purposes </h3>
+<body class="new_boat_page">
+<div class="new_boat_form">
+<h2 class="new_boat_header"> create a new boat! </h1>
+<h3 class="new_boat_subheader"> please be sure to upload a photo of the boat for verification purposes </h3>
 
 <%= form_for @boat, :url => boats_path, :html => { :multipart => true } do |f| %>
 	<%= f.label :Name %>
@@ -21,5 +23,5 @@
 	<br>
 	<%= f.submit :create %>
 	<% end %>
-
-	<%= @boat.errors.full_messages.first if @boat.errors.any? %>
+</div>
+</body>
