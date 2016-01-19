@@ -92,7 +92,10 @@ li:hover li a:hover {
 
 }
 
-
+@font-face {
+        font-family: "Treasure Map";
+        src: url(/assets/Treamd.ttf) format("truetype");
+    }
 
 
 
