@@ -70,3 +70,30 @@
 	margin-bottom: 10px;
 	background-color: #D9D7C9;
 }
+
+.new_boat_page {
+	background-image: url("waves.jpg");
+}
+
+.new_boat_form {
+	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 350px;
+	margin-top: 10px;
+	font-family: helvetica;
+}
+
+.new_boat_header {
+	color: #B23C11;	
+}
+
+.new_boat_subheader {
+	color: #B23C11;		
+}
+
+
+
+

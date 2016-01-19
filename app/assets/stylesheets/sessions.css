@@ -1,0 +1,23 @@
+.login_page {
+    background-image: url("planks.jpg");
+}
+
+.login_form {
+	font-family: helvetica;
+	text-align: center;
+	color: #D9D7C9;
+	border: 10px #2B3231 solid;
+	background-color: #2B3231;
+	width: 400px;
+	float: right;
+	display: inline-block;
+	margin-top: 45px;
+	margin-right: 430px;
+	text-alight: center;
+	opacity: .9;
+	font-size: 20px;
+}
+
+.login_header {
+	color: #B23C11;
+}

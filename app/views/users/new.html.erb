@@ -1,15 +1,36 @@
-<h1> Become a Pirate! </h1>
+<body class="new_pirate_page">
+<div class="sign_up_headers">
+<h4> Are you an aspiring pirate who knows that some proper record keeping could be the step he needs to get to the next level? </h4>
+<h4> Are you successful on the high seas but need a virtual space to organize your aily swashbuckling deeds? </h4>
+<h4> Do you have hobbies or family distracting you from devoting 100% of your time to stalking potential captures and planning your expeditions? </h4>
 
+<h3> If any of these sound like you.. JOIN SEADOGS! </h3>
+<h4> Your one stop shop for all your pirate logging needs! </h3>
+</div>
+
+<div class="sign_up_form">
 <%= form_for @user do |f| %>
 <%= f.label :Captain %>
 <%= f.text_field :lname %>
+<br>
+<br>
 <%= f.label :password %>
 <%= f.password_field :password %>
+<br>
+<br>
 <%= f.label :password_confirmation %>
 <%= f.password_field :password_confirmation %>
+<br>
+<br>
 <%= f.label :adjective %>
 <%= f.select :adjective, ['Scallywag', 'Buccaneer', 'Old Salt', 'SeaDog', 'Landlubber']%>
+<br>
+<br>
 <%= f.label :bio %>
 <%= f.text_field :bio %>
+<br>
+<br>
 <%= f.submit :create %>
 <% end %>
+</div>
+</body>

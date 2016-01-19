@@ -1,4 +1,5 @@
 <body class="users_page">
+<div class="page">
 <div class="user_info">
 <h2 class="user_info_header"> Pirate Info </h2>
 <%= content_tag :h3, "Captain #{@user.lname}" %>
@@ -7,7 +8,6 @@
 <br>
 <%= content_tag :h3, "Status: #{@user.adjective}" %>
 <br>
-Total Worth: <%= @user.total_worth %>
 <br>
 </div>
 
@@ -36,27 +36,48 @@ Total Worth: <%= @user.total_worth %>
 <% end %>
 </div>
 
-<div class="user_stalked_boats">
-<h3 class="user_stalked_boats_header"> Boats Being Stalked </h3>
+<div class="user_boat_list">
+<h3 class="user_boat_list_header"> Pirate's Fleet </h3>
 
-<% @user.stalked_boats.each do |boat| %>
+<% @user.exp_boats.each do |boat| %>
 <%= boat.name %>
+<br>
+<%= image_tag boat.image.url(:medium) %>
 <br>
 <br>
 <% end %>
 
 </div>
 
-<!-- <div class="user_boat_list">
-<h3 class="user_boat_list_header"> Pirate's Fleet </h3>
+<div class="user_exp_list">
+<h3 class="user_exp_list_header"> Pirate's Expeditions </h3>
 
-<% @user.expeditions.each do |boat| %>
-<%= boat.name %>
+<% @user.expeditions.each do |e| %>
+<%= e.name %>
 <br>
 <br>
 <% end %>
 
-</div> -->
+</div>
+
+<div class="user_stalked_boats">
+<h3 class="user_stalked_boats_header"> Boats Currently Being Stalked </h3>
+
+<% @user.stalked_boats.each do |boat| %>
+<%= boat.name %>
+<br>
+<%= image_tag boat.image.url(:medium) %>
+
+<br>
+<br>
+<% end %>
+
+</div>
+</div>
+
+
+
+
 
 </body>
 

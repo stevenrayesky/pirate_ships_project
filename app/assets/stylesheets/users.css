@@ -51,17 +51,43 @@
 
 .leaderboard_header {
 	font-family: helvetica;
-	color: #B23C11;
+	color: #D9D7C9;
 	text-align: center;
 }
 
 .leaderboard_subheader {
 	font-family: helvetica;
-	color: #B23C11;
+	color: #D9D7C9;
 	text-align: center;
 }
 
 .leader_board {
+	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 370px;
+	margin-top: 10px;
+	font-family: helvetica;
+	margin-bottom: 20px;
+	opacity: .9;
+}
+
+.leaderboard_page {
+	background-image: url("pirate_battle.jpg");
+}
+
+.user_headers {
+	border: 5px #B23C11 solid;
+	background-color: #2B3231;
+	opacity: .9;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 20px;
+}
+
+.user_stalked_boats {
 	text-align: center;
 	border: 3px solid #2B3231;
 	background-color: #D9D7C9;
@@ -73,17 +99,72 @@
 	margin-bottom: 20px;
 }
 
-.leaderboard_page {
-	background-image: url("old_paper.jpg");
-}
-
-.user_stalked_boats {
-	text-align: center;
+.user_stalked_boats_header {
+	color: #B23C11;	
 }
 
 .user_boat_list {
 	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 350px;
+	margin-top: 10px;
+	font-family: helvetica;
+	margin-bottom: 20px;
 }
 
+.user_boat_list_header {
+	color: #B23C11;
+}
+
+.user_exp_list {
+	text-align: center;
+	border: 3px solid #2B3231;
+	background-color: #D9D7C9;
+	border-radius: 10%;
+	margin-left: 400px;
+	margin-right: 350px;
+	margin-top: 10px;
+	font-family: helvetica;
+	margin-bottom: 20px;
+}
+
+.user_exp_list_header {
+	color: #B23C11;
+}
+
+.sign_up_headers {
+	font-family: helvetica;
+	text-align: center;
+	color: #D9D7C9;
+	border: 10px #2B3231 solid;
+	background-color: #2B3231;
+	width: 600px;
+	margin-top: 10px;
+	opacity: .9;
+	float: left;
+	display: inline-block;
+	margin-left: 50px;
+}
+
+.new_pirate_page {
+    background-image: url("planks.jpg");
+}
+
+.sign_up_form {
+	font-family: helvetica;
+	text-align: center;
+	color: #D9D7C9;
+	border: 10px #2B3231 solid;
+	background-color: #2B3231;
+	width: 400px;
+	float: right;
+	display: inline-block;
+	margin-top: 45px;
+	margin-right: 70px;
+	opacity: .9;
+}
 
 
