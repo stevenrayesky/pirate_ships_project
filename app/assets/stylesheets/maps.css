@@ -1,4 +1,6 @@
-
+.map_container {
+	z-index: -1;
+}
 .stalked {
 	color: white;
 	font-size: 2000%;
@@ -15,12 +17,13 @@
 }
 
 .boat_name {
-    height: 70px;
-    width: 100px;
+    border-radius: 15%;
     margin-top: 50px;
     text-align: center;
     vertical-align: middle;
     background-color: #2B3231;
+    font-family: "Treasure Map";
+    font-size: 25px;
     color: #EFE8D8;
     display: none;
     padding: 6px;
@@ -46,6 +49,7 @@
 }
 
 .map_islands {
+	z-index: 0;
 	position: absolute;
 }
 
@@ -113,10 +117,12 @@
 }
 
 .boat_image {
+	z-index: 1;
 	width: 18%;
 }
 
 .expedition_form_div {
+	z-index: 2;
 	display: none;
 	position: absolute;
 	left: 50%;

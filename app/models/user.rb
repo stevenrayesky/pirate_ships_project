@@ -17,4 +17,10 @@ class User < ActiveRecord::Base
 	def stalking?(boat)
 		stalked_boats.include?(boat)
 	end
+
+	def update_worth(boat)
+		new_worth = total_worth+boat.worth_for_pirate
+		self.update(total_worth: new_worth)
+		total_worth
+	end
 end
