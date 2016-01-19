@@ -6,20 +6,24 @@
 <span class="stalked">Stalked!</span>
 
 <%= link_to image_tag("seadogs_logo_burned.png", class: "logo_map"),users_path %>
-
+<!-- There are four island divs because there are four array variables. The boats get placed in the div that corresponds to there location attribute. -->
 	<%= content_tag :div, id: "barataria_bay", class: "island_container" do %>
 		<%= content_tag :h3, class: "island_name_header" do %>
 			Barataria Bay
 		<% end %>
 		<%= image_tag "island4.png", id: "island_1", class: "map_islands" %>
 		<%= content_tag :div, class: "all_boats" do %>
+		<!-- Iterating over the array of boats for barataria -->
 			<% @barataria_bay_boats.each do |boat| %>
+			<!-- Hidden form to create an expedition when you click the boat image. Passing in the boat local variable. -->
 				<%= render 'form', boat: boat %>
+				<!-- MapsHelper that determines the boat's png based on how many containers it has. -->
 				<%= boat_image(boat) %>
 					<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
 						<br>
 						containers: <%= boat.container %>
+						<!-- If the user is alread stalking the boat the option to stalk will disappear and will disappear on click through UJS. -->
 						<% if @current_user.stalking?(boat) == false %>
 							<%= content_tag :p, class: "stalk_button" do %>
 								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
@@ -37,7 +41,7 @@
 		<% end %>
 		<%= image_tag "island3.png", id: "island_2", class: "map_islands" %>
 		<%= content_tag :div, class: "all_boats" do %>
-			<% @canary_islands_boats.each do |boat| %>
+			<% @tortuga_boats.each do |boat| %>
 				<%= render 'form', boat: boat %>
 				<%= boat_image(boat) %>
 					<%= content_tag :p, class: "boat_name" do %>
@@ -61,7 +65,7 @@
 		<% end %>
 		<%= image_tag "island2.png", id: "island_3", class: "map_islands" %>
 		<%= content_tag :div, class: "all_boats" do %>
-			<% @tortuga_boats.each do |boat| %>
+			<% @canary_islands_boats.each do |boat| %>
 					<%= render 'form', boat: boat %>
 					<%= boat_image(boat) %>
 					<%= content_tag :p, class: "boat_name" do %>
