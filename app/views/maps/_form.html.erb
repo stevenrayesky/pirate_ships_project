@@ -1,5 +1,5 @@
 <%= content_tag :div, class: "expedition_form_div" do %>
-	<%= form_for @expedition do |f| %>
+	<%= form_for @expedition, url: { action: "create", controller: "expeditions" } do |f| %>
 		<%= f.label :Expedition_name %>
 		<%= f.text_field :name %>
 		<br>

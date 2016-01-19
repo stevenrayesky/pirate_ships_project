@@ -12,21 +12,21 @@ User.create!(total_worth: 1500, password: "123", lname: "Sparrow", bio: "n the f
 User.create!(total_worth: 300, password: "123", lname: "Kidd", bio: "A stylish Scotsman who had been a leading citizen of New York City, actively involved in the building of Trinity Church, Captain Kidd began his career as a privateer, originally commissioned to rid the seas of pirates. Only reluctantly, did he cross bounds into piracy (having been elected pirate captain by his crew), although his piracy itself may be questionable as his exploits may have been sensationalized.", adjective: "SeaDog")
 User.create!(total_worth: 900, password: "123", lname: "Roberts", bio: "Roberts’ crew admired his adventurist courage, calling him “pistol proof” - though he had been forced into piracy, having once been an officer on board a ship that was captured by the pirate Howell Davis. After taking over, Roberts’ navigational skills, charisma, and bravado painted him golden the eyes of his men.", adjective: "Old Salt")
 
-Boat.create(name: "Old Faithful", container: 2, captured: false, location: "Canary Islands", cargo: "Gold")
-Boat.create(name: "Ye Scurvy Dog", container: 1, captured: false, location: "Barataria Bay", cargo: "Rum")
-Boat.create(name: "Mermaid's Bosom", container: 4, captured: false, location: "Tortuga", cargo: "Letters")
+Boat.create(name: "Old Faithful", container: 2, captured: false, location: "Canary Islands", cargo: 500)
+Boat.create(name: "Ye Scurvy Dog", container: 1, captured: false, location: "Barataria Bay", cargo: 450)
+Boat.create(name: "Mermaid's Bosom", container: 4, captured: false, location: "Tortuga", cargo: 100)
 
-Boat.create(name: "Lil' Pep", container: 1, captured: false, location: "Tortuga", cargo: "Letters")
-Boat.create(name: "King's Courier", container: 2, captured: false, location: "Canary Islands", cargo: "Ammunition")
-Boat.create(name: "Forlorn Maiden", container: 4, captured: false, location: "Port Royal", cargo: "Rotten Apples")
+Boat.create(name: "Lil' Pep", container: 1, captured: false, location: "Tortuga", cargo: 100)
+Boat.create(name: "King's Courier", container: 2, captured: false, location: "Canary Islands", cargo: 300)
+Boat.create(name: "Forlorn Maiden", container: 4, captured: false, location: "Port Royal", cargo: 150)
 
-Boat.create(name: "Ransom", container: 5, captured: false, location: "Barataria Bay", cargo: "Gold")
-Boat.create(name: "Cloud's Glory", container: 1, captured: false, location: "Port Royal", cargo: "Cotton")
-Boat.create(name: "Sid Meyer", container: 2, captured: false, location: "Tortuga", cargo: "Rotten Apples")
+Boat.create(name: "Ransom", container: 5, captured: false, location: "Barataria Bay", cargo: 500)
+Boat.create(name: "Cloud's Glory", container: 1, captured: false, location: "Port Royal", cargo: 400)
+Boat.create(name: "Sid Meyer", container: 2, captured: false, location: "Tortuga", cargo: 150)
 
-Boat.create(name: "Captain's Hook", container: 2, captured: false, location: "Canary Islands", cargo: "Ammunition")
-Boat.create(name: "Pan's Schooner", container: 3, captured: false, location: "Port Royal", cargo: "Rum")
-Boat.create(name: "The Black Pearl", container: 3, captured: false, location: "Barataria Bay", cargo: "Rotten Apples")
+Boat.create(name: "Captain's Hook", container: 2, captured: false, location: "Canary Islands", cargo: 300)
+Boat.create(name: "Pan's Schooner", container: 3, captured: false, location: "Port Royal", cargo: 450)
+Boat.create(name: "The Black Pearl", container: 3, captured: false, location: "Barataria Bay", cargo: 150)
 
 
 Expedition.create(boat_id: 1, user_id: 1, captains_log: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae rem magni, sint nihil, expedita illum molestiae facilis incidunt repellat modi saepe beatae vel, qui facere quam aliquam. Molestias aut, totam.", worth: 400, origin: "origin_test", destination: "destination_test", name: "expedition_name")

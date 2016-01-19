@@ -33,9 +33,12 @@
 		<%= image_tag("seadogs_logo_burned.png", class: "logo_layout") %>
 
 	</header>
-	<%= flash[:notice] if flash[:notice] %> 
+	<% if flash[:notice] -%>
+  <h3 class = "alert_notice"><%= flash[:notice] %></h3>
+<% end %>
 	<%= flash[:alert] if flash[:alert] %>
 <%= yield %>
 
 </body>
 </html>
+

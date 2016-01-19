@@ -14,8 +14,8 @@
 		<%= image_tag "island4.png", id: "island_1", class: "map_islands" %>
 		<%= content_tag :div, class: "all_boats" do %>
 			<% @barataria_bay_boats.each do |boat| %>
-					<%= boat_image(boat) %>
-					<%= render 'form', boat: boat %>
+				<%= render 'form', boat: boat %>
+				<%= boat_image(boat) %>
 					<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
 						<br>
@@ -24,6 +24,7 @@
 							<%= content_tag :p, class: "stalk_button" do %>
 								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
 							<% end %>
+						<% else %>	
 						<% end %>
 					<% end %>
 			<% end %>
@@ -37,14 +38,17 @@
 		<%= image_tag "island3.png", id: "island_2", class: "map_islands" %>
 		<%= content_tag :div, class: "all_boats" do %>
 			<% @canary_islands_boats.each do |boat| %>
-					<%= boat_image(boat) %>
-					<%= render 'form', boat: boat %>
+				<%= render 'form', boat: boat %>
+				<%= boat_image(boat) %>
 					<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
+						<br>
+						containers: <%= boat.container %>
 						<% if @current_user.stalking?(boat) == false %>
 							<%= content_tag :p, class: "stalk_button" do %>
 								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
 							<% end %>
+						<% else %>
 						<% end %>
 					<% end %>
 				<% end %>
@@ -62,10 +66,13 @@
 					<%= boat_image(boat) %>
 					<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
+						<br>
+						containers: <%= boat.container %>
 						<% if @current_user.stalking?(boat) == false %>
 							<%= content_tag :p, class: "stalk_button" do %>
 								<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
 							<% end %>
+						<% else %>	
 						<% end %>
 					<% end %>
 				<% end %>
@@ -83,6 +90,8 @@
 				<%= boat_image(boat) %>
 				<%= content_tag :p, class: "boat_name" do %>
 						<%= boat.name %>
+						<br>
+						containers: <%= boat.container %>
 						<% if @current_user.stalking?(boat) == false %>
 							<%= content_tag :p, class: "stalk_button" do %>
 									<%=link_to "Stalk", boat_stalks_path(boat.id), method: :post, remote: true, class: "stalk_link" %>
