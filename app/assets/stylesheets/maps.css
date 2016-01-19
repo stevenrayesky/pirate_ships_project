@@ -27,6 +27,12 @@
     position: absolute;
 }
 
+.stalk_link {
+	text-decoration: none;
+	font-family: "Treasure Map";
+	color: #303030;
+}
+
 .boat_image:hover + .boat_name {
 	display: block;
 }
@@ -111,16 +117,25 @@
 }
 
 .expedition_form_div {
+	display: none;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 85%;
-	height: 65%;
+	width: 200px;
+	height: 200px;
 	border-radius: 15px;
 	background-color: #EFE8D7;
 	border: solid #656565 2px;
 }
 
+.island_name_header {
+	color: #303030;
+	font-size: 35px;
+	font-family: "Treasure Map";
+	position: absolute;
+	margin: 0;
+	padding: 25px 0 0 25px;
+}
 
 
 

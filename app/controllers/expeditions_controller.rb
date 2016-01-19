@@ -10,10 +10,11 @@ class ExpeditionsController < ApplicationController
 	def create
 		@expedition = Expedition.new(expedition_params)
 		@expedition.user_id = current_user.id
-		@expedition.boat_id = params[:boat_id]
-		@boat = Boat.find(params[:boat_id])
+		@expedition.boat_id = params[:expedition][:boat_id]
+		@boat = Boat.find(params[:expedition][:boat_id])
 		if @expedition.save
-			@boat.worth_for_pirate += current_user.total_worth
+			current_user.total_worth = @boat.worth_for_pirate+current_user.total_worth
+			@boat.update(captured: true)
 			flash[:notice] = "You have successfully submitted this expedition report and can keep your latest acquistion"
 			redirect_to root_path
 
@@ -36,6 +37,6 @@ class ExpeditionsController < ApplicationController
 
 	private
 	def expedition_params
-		params.require(:expedition).permit(:name, :captains_log, :origin, :destination)
+		params.require(:expedition).permit(:name, :captains_log, :origin, :destination, :user_id, :boat_id)
 	end
 end
